@@ -1,0 +1,26 @@
+.input {
+	width: auto;
+	padding: 8px 10px;
+	background-color: $color-whisper;
+	border: none;
+	border-radius: 3px;
+	font-size: 14px;
+	line-height: 24px;
+	transition: box-shadow $trans-default;
+
+	&:focus-visible {
+		outline: none;
+	}
+
+	&:hover {
+		box-shadow: 0 0 0 1px rgba($color-manatee, 1);
+	}
+
+	&:focus {
+		box-shadow: 0 0 0 1px rgba($color-black, 1);
+	}
+
+	&::placeholder {
+		color: $color-manatee;
+	}
+}

@@ -1,0 +1,51 @@
+{% from "../credit-card/credit-card.nunj" import creditCard %}
+{% from "../icon/icon.nunj" import icon %}
+{% from "../button/button.nunj" import button %}
+
+{% macro billing() %}
+	<div class="billing">
+		<h1 class="billing__title title">Billing Information</h1>
+		<div class="billing__radios">
+			<label class="checkbox checkbox--radio billing__radio">
+				<input type="radio" name="pay" value="card" class="checkbox__input" checked>
+				<span class="checkbox__span">Pay with Credit Card</span>
+			</label>
+			<label class="checkbox checkbox--radio billing__radio">
+				<input type="radio" name="pay" value="paypal" class="checkbox__input">
+				<span class="checkbox__span">
+					{{ icon({
+						iconName: 'paypal',
+						attributes: 'viewBox="0 0 85 23" width="85" height="23"'
+					}) }}
+				</span>
+			</label>
+		</div>
+		{{ creditCard({
+			className: 'billing__card'
+		}) }}
+		<div class="billing__checkboxes">
+			<label class="billing__checkbox checkbox">
+				<input class="checkbox__input" type="checkbox" name="save" checked>
+				<span class="checkbox__span">Save information of this credit card</span>
+			</label>
+			<label class="billing__checkbox checkbox">
+				<input class="checkbox__input" type="checkbox" name="save">
+				<span class="checkbox__span">
+					<span>I accept the <a href="#">terms and comditions </a> and the <a href="#">Privacy Policies</a></span>
+				</span>
+			</label>
+		</div>
+		<div class="billing__btns">
+			{{ button({
+				className: 'billing__btn',
+				children: 'Back',
+				isGrey: true,
+				href: "#"
+			}) }}
+			{{ button({
+				className: 'billing__btn',
+				children: 'Check Out'
+			}) }}
+		</div>
+	</div>
+{% endmacro %}

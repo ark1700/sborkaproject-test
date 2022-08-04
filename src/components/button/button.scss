@@ -1,0 +1,32 @@
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	border-radius: 3px;
+	background-color: $color-royal-blue;
+	border: 1px solid $color-royal-blue;
+	cursor: pointer;
+	font-size: 14px;
+	line-height: 24px;
+	padding: 7px 29px;
+	color: $color-white;
+	transition: background-color $trans-default, border-color $trans-default;
+	text-decoration: none;
+
+	&:hover {
+		background-color: darken($color-royal-blue, 10);
+		border-color: darken($color-royal-blue, 10);
+	}
+
+	&--grey {
+		background-color: transparent;
+		border: 1px solid $color-very-light-grey;
+		color: $color-black;
+
+		&:hover {
+			background-color: transparent;
+			border-color: $color-black;
+		}
+	}
+}

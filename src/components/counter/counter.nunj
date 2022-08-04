@@ -1,0 +1,7 @@
+{% macro counterBtns(number) %}
+	<div data-counter class="counter{% if props.className %} {{ props.className }}{% endif %}">
+		<button type="button" data-counter-btn="minus" aria-label="incrise" class="counter__btn"></button>
+		<input type="number" class="counter__input" value="{{ number if number else 1 }}" readonly/>
+		<button type="button" data-counter-btn="plus" aria-label="decrease" class="counter__btn counter__btn--plus"></button>
+	</div>
+{% endmacro %}

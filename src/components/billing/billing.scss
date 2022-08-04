@@ -1,0 +1,58 @@
+.billing {
+	max-width: 630px;
+	margin: 0 auto;
+
+	@include max-screen(1023px) {
+		max-width: 610px;
+	}
+
+	&__title {
+		margin-top: 0;
+		margin-bottom: 38px;
+	}
+
+	&__radios {
+		display: flex;
+		align-items: center;
+		margin-top: -20px;
+		margin-right: -82px;
+	}
+
+	&__radio {
+		margin-top: 20px;
+		margin-right: 82px;
+	}
+
+	&__card {
+		margin: 40px -30px;
+	}
+
+	&__checkboxes {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__checkbox {
+		margin-bottom: 12px;
+		color: #8c8c8c;
+
+		a {
+			color: $color-black;
+			text-decoration: none;
+
+			&[href] {
+				transition: color $trans-default;
+
+				&:hover {
+					color: inherit;
+				}
+			}
+		}
+	}
+
+	&__btns {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 28px;
+	}
+}

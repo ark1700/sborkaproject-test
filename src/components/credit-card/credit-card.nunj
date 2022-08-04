@@ -1,0 +1,26 @@
+{% macro creditCard(props) %}
+	<div class="credit-card{% if props.className %} {{ props.className }}{% endif %}">
+		<p class="credit-card__name">Name on card</p>
+		<input type="text" name="name" placeholder="Placeholder Text" class="input credit-card__input">
+		<p class="credit-card__name">Card number</p>
+		<div class="credit-card__cols">
+			<input type="number" name="card-number-1" class="input credit-card__input">
+			<input type="number" name="card-number-2" class="input credit-card__input">
+			<input type="number" name="card-number-3" class="input credit-card__input">
+			<input type="number" name="card-number-4" class="input credit-card__input">
+		</div>
+		<div class="credit-card__cols">
+			<div class="credit-card__col">
+				<p class="credit-card__name">Expire date</p>
+				<input type="number" name="date" class="input credit-card__input">
+			</div>
+			<div class="credit-card__col">
+				<p class="credit-card__name">
+					CVV code
+					<span class="credit-card__tooltip">?</span>
+				</p>
+				<input type="number" name="cvv" class="input credit-card__input">
+			</div>
+		</div>
+	</div>
+{% endmacro %}

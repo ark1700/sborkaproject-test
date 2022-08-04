@@ -1,0 +1,46 @@
+{% from "../button/button.nunj" import button %}
+{% from "../basket-card/basket-card.nunj" import basketCard %}
+
+{% macro basket() %}
+	<div class="basket" data-basket>
+		<div class="basket__block">
+			<p class="basket__title title">My basket</p>
+			<ul class="basket__list">
+				{% for item in basketCards %}
+					<li class="basket__card">
+						{{ basketCard(item) }}
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="basket__block">
+			<p class="basket__title title">Promo code</p>
+			<div class="basket__promo">
+				<input type="text" name="promo" class="input basket__promo-input" placeholder="Placeholder Text">
+				{{ button({
+					className: 'basket__promo-btn',
+					children: 'Apply'
+				}) }}
+			</div>
+
+		</div>
+		<div class="basket__block">
+			<p class="basket__summ-item">
+				<span>Subtotal</span>
+				<span class="price">$<span data-basket-subtotal>1 050</span></span>
+			</p>
+			<p class="basket__summ-item">
+				<span>Tax</span>
+				<span class="price">$<span data-basket-extra="100">100</span></span>
+			</p>
+			<p class="basket__summ-item">
+				<span>Shipping</span>
+				<span class="price">$<span data-basket-extra="150">150</span></span>
+			</p>
+			<p class="basket__summ-item basket__summ-item--bold">
+				<span>Total</span>
+				<span class="price">$<span data-basket-total>1 300</span></span>
+			</p>
+		</div>
+	</div>
+{% endmacro %}

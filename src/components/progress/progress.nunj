@@ -1,0 +1,28 @@
+{% macro progress() %}
+	<div class="progress">
+		<div class="progress__item active">
+			<div class="progress__number">
+				1
+				<div class="progress__name">Account</div>
+			</div>
+		</div>
+		<div class="progress__item active">
+			<div class="progress__number">
+				2
+				<div class="progress__name">Shipping</div>
+			</div>
+		</div>
+		<div class="progress__item current">
+			<div class="progress__number">
+				3
+				<div class="progress__name">Billing</div>
+			</div>
+		</div>
+		<div class="progress__item">
+			<div class="progress__number">
+				4
+				<div class="progress__name">Review</div>
+			</div>
+		</div>
+	</div>
+{% endmacro %}

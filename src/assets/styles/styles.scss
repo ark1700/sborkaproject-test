@@ -1,0 +1,23 @@
+// ======= GLOBAL =======
+@import 'constants';
+@import 'lib/base';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+@import 'layout';
+
+// ======= COMPONENTS =======
+@import '../../components/burger/burger';
+@import '../../components/button/button';
+@import '../../components/input/input';
+@import '../../components/checkbox/checkbox';
+@import '../../components/title/title';
+@import '../../components/nav/nav';
+@import '../../components/header/header';
+@import '../../components/page/page';
+@import '../../components/basket/basket';
+@import '../../components/counter/counter';
+@import '../../components/basket-card/basket-card';
+@import '../../components/progress/progress';
+@import '../../components/credit-card/credit-card';
+@import '../../components/billing/billing';

@@ -1,0 +1,20 @@
+{% extends "../ext/base.nunj" %}
+
+{% from "../../components/basket/basket.nunj" import basket %}
+{% from "../../components/billing/billing.nunj" import billing %}
+{% from "../../components/progress/progress.nunj" import progress %}
+
+{% block content %}
+	{% include '../../components/header/header.nunj' %}
+
+	<div class="page">
+		<div class="page__content">
+			{{ progress() }}
+			{{ billing() }}
+		</div>
+		<div class="page__aside">
+			{{ basket() }}
+		</div>
+	</div>
+
+{% endblock content %}

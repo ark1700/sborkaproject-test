@@ -1,0 +1,34 @@
+.burger {
+	position: relative;
+	width: 29px;
+	height: 29px;
+	border: none;
+	background-color: transparent;
+	transition: $trans-default opacity;
+	cursor: pointer;
+
+	&__line {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 100%;
+		height: 2px;
+		background-color: $color-black;
+		transform: translateX(-50%);
+
+		&:nth-child(1) {
+			transform: translate(-50%, 10px);
+		}
+
+		&:nth-child(3) {
+			transform: translate(-50%, -8px);
+		}
+	}
+
+	&[href],
+	&[type='button'] {
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}

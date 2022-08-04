@@ -1,0 +1,23 @@
+{% from "../icon/icon.nunj" import icon %}
+{% from "../counter/counter.nunj" import counterBtns %}
+
+{% macro basketCard(item) %}
+	<div class="basket-card" data-basket-card>
+		<div class="basket-card__img">
+			<img src="assets/images/{{ item.img }}.jpg" srcset= "assets/images/{{ item.img }}@2x.jpg 2x" width='100' height='100' alt='{{ item.name }}'>
+		</div>
+		<div class="basket-card__content">
+			<p class="basket-card__name">{{ item.name }}</p>
+			<div class="basket-card__summ-wrap">
+				{{ counterBtns( item.number ) }}
+				<span class="basket-card__summ">$ <span data-card-price="{{ item.price }}">{{ item.price }}</span></span>
+			</div>
+		</div>
+		<button class="basket-card__close" type="button" aria-label="close" data-basket-card-close>
+			{{ icon({
+				iconName: 'close',
+				attributes: 'viewBox="0 0 18 18" width="18" height="18"'
+			}) }}
+		</button>
+	</div>
+{% endmacro %}

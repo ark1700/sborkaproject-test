@@ -1,0 +1,88 @@
+.header {
+	padding: 23px 0 19px;
+	border-bottom: 1px solid $color-very-light-grey;
+
+	&__wrap {
+		display: grid;
+		align-items: center;
+		padding: 0 30px;
+		grid-template-columns: 1fr auto 1fr;
+	}
+
+	&__logo {
+		display: block;
+		width: 89px;
+		height: 32px;
+		transition: opacity $trans-default;
+
+		&[href] {
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+
+		svg {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__nav {
+		.nav {
+			@include max-screen(1023px) {
+				display: none;
+			}
+		}
+	}
+
+	&__extra {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+
+	&__extra-link {
+		position: relative;
+		display: block;
+		width: 24px;
+		height: 24px;
+		padding: 5px;
+		margin-left: 16px;
+
+		svg {
+			width: 100%;
+			height: 100%;
+		}
+
+		&--cart {
+			padding-top: 9px;
+			padding-right: 6px;
+		}
+	}
+
+	&__link-count {
+		position: absolute;
+		top: 4px;
+		right: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 12px;
+		height: 13px;
+		margin-left: -7px;
+		background-color: $color-royal-blue;
+		border-radius: 50%;
+		font-size: 10px;
+		line-height: 12px;
+		color: $color-white;
+	}
+
+	&__burger {
+		display: none;
+		margin-left: 26px;
+
+		@include max-screen(1023px) {
+			display: flex;
+		}
+	}
+}

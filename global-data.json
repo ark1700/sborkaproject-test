@@ -1,0 +1,42 @@
+{
+	"menuItems": [
+		{
+			"name": "Women’s",
+			"path": "#"
+		},
+		{
+			"name": "Men’s",
+			"path": "#"
+		},
+		{
+			"name": "Home",
+			"path": "#"
+		},
+		{
+			"name": "Travel",
+			"path": "#"
+		},
+		{
+			"name": "Beauty",
+			"path": "#"
+		},
+		{
+			"name": "Sale",
+			"path": "#"
+		}
+	],
+	"basketCards": [
+		{
+			"img": "basket-1",
+			"name": "Amet minim mollit non deserunt ullamco est sit",
+			"price" : "525",
+			"number": 1
+		},
+		{
+			"img": "basket-2",
+			"name": "Amet minim mollit non",
+			"price" : "525",
+			"number": 1
+		}
+	]
+}

@@ -1,0 +1,19 @@
+.page {
+	flex-grow: 1;
+	display: flex;
+	width: 100%;
+
+	&__content {
+		flex-grow: 1;
+		padding: 60px;
+	}
+
+	&__aside {
+		width: 410px;
+		border-left: 1px solid $color-very-light-grey;
+
+		@include max-screen(1023px) {
+			display: none;
+		}
+	}
+}
